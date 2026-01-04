@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio GPT</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: lightgray;
+            font-size: 1.5em;
+        }
+        fieldset {
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+<fieldset>
+    <legend><strong>Dados Pessoais</strong></legend>
+    <script>
+        // Colher dados do usuário
+        var nome = window.prompt('Qual é o seu nome? ')
+        var dataNascimento = Number(window.prompt('Em que ano você nasceu? '))
+        var salario = Number(window.prompt('Qual é o seu salário? '))
+    
+        // Cálculos
+        var idade = 2026 - dataNascimento
+        var salarioAnual = salario * 12
+    
+        // Resposta na tela
+        document.write(`Olá, <strong>${nome}</strong>!<br>`)
+        document.write(`Você tem <strong>${idade}</strong> anos.<br>`)
+        document.write(`Seu nome tem <strong>${nome.length}</strong> letras.<br>`)
+        document.write(`Seu nome em maiúsculas: <strong>${nome.toUpperCase()}</strong><br>`)
+        document.write(`Salário mensal: <strong>${salario.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong><br>`)
+        document.write(`Salário anual: <strong>${salarioAnual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</strong>`)
+    </script>
+</fieldset>
+</body>
+</html>
